@@ -397,7 +397,7 @@ def pytest_runtest_setup(item):  # noqa: C901
             # We add a '*' before test to eliminate the surprise of needing
             # a '*' before the name of a test function.
             if fnmatch(item_name, '*' + test):
-                pytest.xfail(reason)
+                pytest.skip(reason)
 
 
 def pytest_terminal_summary(terminalreporter):
